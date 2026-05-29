@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>🎮 Pokémon App</h1>
+  <h2>Scegli una categoria:</h2>
+  <div class="type-buttons">
+    <button 
+      *ngFor="let type of types" 
+      (click)="goToList(type.name)">
+      {{ type.name | uppercase }}
+    </button>
+  </div>
+</div>

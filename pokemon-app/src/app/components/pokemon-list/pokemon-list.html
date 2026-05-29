@@ -1,0 +1,12 @@
+<div class="container">
+  <button class="back-btn" (click)="goBack()">← Indietro</button>
+  <h2>Pokémon di tipo: {{ typeName | uppercase }}</h2>
+  <div class="pokemon-grid">
+    <div 
+      class="pokemon-card" 
+      *ngFor="let pokemon of pokemonList"
+      (click)="goToDetail(pokemon.name)">
+      {{ pokemon.name | uppercase }}
+    </div>
+  </div>
+</div>
